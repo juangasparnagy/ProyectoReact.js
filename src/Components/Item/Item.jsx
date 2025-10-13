@@ -5,7 +5,7 @@ export const Item = ({name,price,description,imageUrl,children}) => {
             <img src={imageUrl} alt={description} />
             <h2>{name}</h2>
             <p>Precio: ${price}</p>
-            <p>Descripcion: ${description}</p>
+            <p>Descripcion: {description}</p>
             {children}
         </article>
     )
