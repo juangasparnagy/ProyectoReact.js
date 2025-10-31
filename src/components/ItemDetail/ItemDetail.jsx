@@ -1,8 +1,14 @@
 import { Item } from "../Item/Item"
-import { CartContext } from "../../context/CarContext/CartContext"
-import { useCartContext } from "../../context/CarContext/useCartContext"
+import { useCartContext } from "../../context/CartContext/useCartContext"
+import { Count } from "../Count/Count"
+
 export const ItemDetail = ({detail}) => {
-    const {addItem} = useCartContext()
+    const  { addItem } = useCartContext()
+    const handleAdd = (quantity) => {
+        addItem({...detail, quantity})
+    }
     return (<>
-    <Item {...detail}><button onClick={() => {addItem(detail)}} id={detail.id} className="btn">Mandar al Carrito</button></Item></>)
+    <Item {...detail}>
+        <Count btnText={"agrega"} onConfirm={handleAdd}></Count>
+    </Item></>)
 }
