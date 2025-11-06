@@ -8,6 +8,7 @@ import { Header } from './components/Header/Header'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import { CartProvider } from './context/CartContext/CartProvider'
+import { Cart } from './components/Cart/Cart'
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ItemListContainer titulo={"Bienvenidos a la tienda de cosas"}/>}/>
         <Route path="/detail/:id" element={<ItemDetailContainer/>}/>
-        <Route path="/carrito/" element={<p>Acá va el carrito</p>}></Route>
+        <Route path="/carrito/" element={<Cart/>}></Route>
       </Routes>
     <Footer/>
       </div>

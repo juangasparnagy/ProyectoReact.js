@@ -43,7 +43,10 @@ export const CartProvider = ({children}) => {
     const clearCart = () => {
         setCart([])
     }
-    const values = {cart, addItem, clearCart, getTotalItems, total, deleteItem}
+    const checkout= () => {
+        const ok = confirm("¿Seguro que desea finalizar la compra?")   
+     }
+    const values = {cart, addItem, clearCart, getTotalItems, total, deleteItem,checkout}
     
     return <CartContext.Provider value={values}>{children}</CartContext.Provider>
 }
