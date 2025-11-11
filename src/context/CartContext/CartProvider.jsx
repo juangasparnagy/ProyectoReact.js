@@ -44,7 +44,11 @@ export const CartProvider = ({children}) => {
         setCart([])
     }
     const checkout= () => {
-        const ok = confirm("¿Seguro que desea finalizar la compra?")   
+        const ok = confirm("¿Seguro que desea finalizar la compra?")
+        if (ok){
+            alert("¡Se realizó la compra con éxito!")
+            clearCart()
+        }   
      }
     const values = {cart, addItem, clearCart, getTotalItems, total, deleteItem,checkout}
     

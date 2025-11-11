@@ -6,9 +6,14 @@ export const ItemDetailContainer = () => {
     const [detail,setDetail] = useState({})
     const {id} = useParams()
     
+    //Esto es para poder elegir fácilmente entre json local y mockapi como fuente de
+    //los productos a mostrar.
+    const productsJason = "/data/products.json"
+    const productsMyMockapi = "https://6900bc35ff8d792314bb37b2.mockapi.io/products"
+
 
     useEffect(() => {
-        fetch("/data/products.json")
+        fetch(productsMyMockapi)
             .then((res) => {
             if(!res.ok){throw new Error("No hay producto")}
             return res.json()})
