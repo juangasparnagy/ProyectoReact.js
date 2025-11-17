@@ -14,6 +14,7 @@ import { MainLayout } from './layouts/MainLayout'
 import { AdminLayout } from './layouts/AdminLayout'
 import { RutaProtegida } from './components/RutaProtegida/RutaProtegida'
 import { Login } from './components/Login/Login'
+//Recordar que esto está funcionando en netlify porque está usando un archivo public/_redirects con este contenido: /* /index.html   200
 
 function App() {
   return (
