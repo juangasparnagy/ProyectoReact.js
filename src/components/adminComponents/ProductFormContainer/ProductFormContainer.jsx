@@ -3,6 +3,7 @@ import { ProductFormUI } from "../ProductFormUI/ProductFormUI"
 import { validateProduct } from "../../../utils/validateProducts"
 import { uploadToImgbb } from "../../../services/uploadImage"
 import { createProduct } from "../../../services/products"
+import { useAuthContext } from '../../../context/AuthContext/useAuthContext'
 
 import "./ProductFormContainer.css";
 
@@ -10,6 +11,7 @@ export const ProductFormContainer = () => {
     const [loading, setLoading] = useState()
     const [file, setFile] = useState(null)
     const [errors, setErrors] = useState("")
+    const {logout} = useAuthContext()
     const [product, setProduct] = useState({
         name:"",
         price:"",
@@ -50,5 +52,5 @@ export const ProductFormContainer = () => {
     }
 
 
-    return <ProductFormUI product={product} errors={errors} loading={loading} onChange={handleChange} onFileChange={setFile} onSubmit={handleSubmit} ></ProductFormUI>
+    return <ProductFormUI product={product} errors={errors} loading={loading} onChange={handleChange} onFileChange={setFile} onSubmit={handleSubmit} logout={logout}></ProductFormUI>
 }

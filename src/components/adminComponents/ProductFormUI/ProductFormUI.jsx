@@ -1,7 +1,10 @@
-export const ProductFormUI = ({product, errors, loading, onChange, onFileChange, onSubmit}) => {
-    
+export const ProductFormUI = ({product, errors, loading, onChange, logout, onFileChange, onSubmit}) => {
     
     return (<section>
+        <div>
+            Cerrar Sesión:---                   
+            <button className="btn-admin" id="logout" onClick={logout}>LOGOUT</button></div>
+        
         <form className="product-form" onSubmit={onSubmit}>
             <h2>Agregar Producto</h2>
             <div>

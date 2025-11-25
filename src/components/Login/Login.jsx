@@ -33,11 +33,11 @@ export const Login = () => {
             <h2>Iniciar Sesión</h2>
             <div>
                 <label htmlFor="name">Usuario:</label>
-                <input type="text" name="name" value={userForm.name} onChange={handlechange}/>
+                <input id="name" type="text" name="name" value={userForm.name} onChange={handlechange}/>
             </div>
             <div>
                 <label htmlFor="password">Contraseña:</label>
-                <input type="password" name="password" value={userForm.password} onChange={handlechange}/>
+                <input id="password" type="password" name="password" value={userForm.password} onChange={handlechange}/>
             </div>
             <button type="submit">Iniciar sesión</button>
         </form>
