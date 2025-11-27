@@ -42,8 +42,10 @@ export const ProductFormContainer = () => {
             const imageUrl = await uploadToImgbb(file)
             const productData = {...product, price: Number(product.price), imageUrl}
             await createProduct(productData)
-            alert("se cargó con éxito")   
             setProduct({name:"", price:"", category:"", description:""})
+            //console.log("se borró el formulario y acá el setFile tendría que borrar el campo de archivo")
+            setFile(null)
+            alert("se cargó con éxito")  
         } catch (error){
             setErrors({ general: error.message})
         } finally{
