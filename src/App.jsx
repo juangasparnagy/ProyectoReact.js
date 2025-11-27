@@ -20,10 +20,10 @@ function App() {
           {/*MainLayout ya trae el header, por eso se remueve de App.jsx*/}
           <Routes>
             <Route element={<MainLayout/>}>
-              <Route path="/" element={<ItemListContainer titulo={"Bienvenidos a la tienda de cosas"}/>}/>
+              <Route path="/" element={<ItemListContainer titulo={"Bienvenidos a mi tienda de panadería"}/>}/>
               <Route path="/detail/:id" element={<ItemDetailContainer/>}/>
               <Route path="/carrito/" element={<Cart/>}></Route>
-              <Route path="/category/:category" element={<ItemListContainer titulo={"Bienvenidos a la tienda de cosas"}/>}></Route>
+              <Route path="/category/:category" element={<ItemListContainer titulo={"Bienvenidos a mi tienda de panadería"}/>}></Route>
             </Route>
             <Route path="/admin" element={<AdminLayout/>}>
               <Route index element={<Login/>} />

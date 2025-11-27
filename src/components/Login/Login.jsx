@@ -3,7 +3,7 @@ import { useAuthContext } from '../../context/AuthContext/useAuthContext'
 import { Navigate, useNavigate } from "react-router-dom"
 
 export const Login = () => {
-    const [userForm, setUserForm] = useState({user:"", password:""})
+    const [userForm, setUserForm] = useState({name:"", password:""})
     const {user, login} = useAuthContext() 
 
     const navigate = useNavigate()
@@ -24,7 +24,7 @@ export const Login = () => {
             navigate("/admin/alta-productos")
         }else{
             alert("Nombre o contraseña incorrecto/a")
-            setUserForm({ user:"", password:"" })
+            setUserForm({ name:"", password:"" })
         }
     }
 
